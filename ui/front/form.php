@@ -91,8 +91,7 @@ if ( isset( $_POST[ '_pods_nonce' ] ) ) {
                 if ( 'hidden' != $field[ 'type' ] )
                     continue;
                 
-                $field_value = $pod->field( array( 'name' => $field[ 'name' ], 'in_form' => true ) );
-                echo PodsForm::field( 'pods_field_' . $field[ 'name' ], $field_value, 'hidden' );
+                echo PodsForm::field( 'pods_field_' . $field[ 'name' ], $pod->field( array( 'name' => $field[ 'name' ], 'in_form' => true ) ) 'hidden' );
            }
         ?>
 
