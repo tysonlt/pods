@@ -1,4 +1,10 @@
 <?php
+
+//make sure relationship are printed as ids 
+if ( is_array( $value ) ) {
+    $value = implode( ',', $value );
+}
+
 $attributes = array();
 $attributes[ 'type' ] = 'hidden';
 $attributes[ 'value' ] = $value;
