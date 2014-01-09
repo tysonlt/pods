@@ -91,12 +91,7 @@ if ( isset( $_POST[ '_pods_nonce' ] ) ) {
                 if ( 'hidden' != $field[ 'type' ] )
                     continue;
                 
-                //make sure relationship ids are printed
-                //@todo UNTESTED for multi-select relationships
                 $field_value = $pod->field( array( 'name' => $field[ 'name' ], 'in_form' => true ) );
-                if (is_array($field_value)) {                	
-                	$field_value = join(',', $field_value);
-                }
                 echo PodsForm::field( 'pods_field_' . $field[ 'name' ], $field_value, 'hidden' );
            }
         ?>
